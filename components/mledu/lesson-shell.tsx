@@ -13,13 +13,14 @@ import {
   Clock3,
   Code2,
   Copy,
+  ExternalLink,
   Menu,
   PlayCircle,
   Search,
   X,
 } from "lucide-react";
 import { useMemo, useState } from "react";
-import { codeFor, getLessonIndex, lessons, modules, sampleVideoId, tutorialFor } from "@/lib/curriculum";
+import { codeFor, getLessonIndex, getLessonVideo, getYouTubeUrl, lessons, modules, playlistId, tutorialFor } from "@/lib/curriculum";
 import { useProgress } from "@/hooks/use-progress";
 import { Progress } from "@/components/ui/progress";
 import { SiteHeader } from "./site-header";
@@ -40,6 +41,7 @@ export function LessonShell({ lessonId }: { lessonId: string }) {
   const progress = Math.round((completed.length / lessons.length) * 100);
   const tutorial = tutorialFor(lesson.title, lesson.module.title);
   const code = codeFor(lesson.title);
+  const video = getLessonVideo(lessonId);
 
   const filteredModules = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -141,12 +143,19 @@ export function LessonShell({ lessonId }: { lessonId: string }) {
                 <div>
                   <div className="overflow-hidden rounded-3xl border border-border bg-black shadow-2xl shadow-violet-950/10">
                     <div className="aspect-video">
-                      <iframe className="h-full w-full" src={`https://www.youtube-nocookie.com/embed/${sampleVideoId}?rel=0`} title={`${lesson.title} video lesson`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                      <iframe className="h-full w-full" src={`https://www.youtube-nocookie.com/embed/${video.videoId}?list=${playlistId}&index=${video.playlistIndex}&rel=0`} title={`${lesson.title} video lesson`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                     </div>
                   </div>
-                  <div className="mt-5 flex items-start gap-3 rounded-2xl border border-cyan-500/20 bg-cyan-500/8 p-4 text-sm leading-6 text-muted-foreground">
-                    <PlayCircle className="mt-0.5 size-5 shrink-0 text-cyan-600" />
-                    <p><strong className="text-foreground">Video placeholder ready.</strong> Replace the seeded YouTube ID in the content store with your own lesson video when publishing the curriculum.</p>
+                  <div className={`mt-5 flex flex-col gap-4 rounded-2xl border p-4 text-sm leading-6 sm:flex-row sm:items-center ${video.match === "primary" ? "border-cyan-500/20 bg-cyan-500/8" : "border-amber-500/25 bg-amber-500/8"}`}>
+                    <span className={`grid size-10 shrink-0 place-items-center rounded-xl ${video.match === "primary" ? "bg-cyan-500/12 text-cyan-600" : "bg-amber-500/12 text-amber-600"}`}><PlayCircle className="size-5" /></span>
+                    <div className="min-w-0 flex-1">
+                      <p className={`text-[10px] font-bold uppercase tracking-[.14em] ${video.match === "primary" ? "text-cyan-700 dark:text-cyan-300" : "text-amber-700 dark:text-amber-300"}`}>{video.match === "primary" ? "Course playlist match" : "Closest available playlist lesson"}</p>
+                      <p className="mt-0.5 font-semibold text-foreground">{video.title}</p>
+                      {video.match === "related" && <p className="mt-1 text-xs text-muted-foreground">The supplied playlist does not currently contain an exact dedicated video for this lesson title.</p>}
+                    </div>
+                    <a href={getYouTubeUrl(video)} target="_blank" rel="noreferrer" className="inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-full border border-border bg-card px-4 text-xs font-semibold text-foreground transition hover:border-foreground/20">
+                      Open on YouTube <ExternalLink className="size-3.5" />
+                    </a>
                   </div>
                 </div>
               )}
