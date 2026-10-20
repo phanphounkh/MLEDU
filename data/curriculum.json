@@ -1,0 +1,145 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "Machine Learning Basics",
+    "description": "Build a clear mental model of AI, machine learning, and deep learning.",
+    "level": "Foundation",
+    "lessons": [
+      { "id": "1-1", "number": "1.1", "title": "AI vs Machine Learning vs Deep Learning", "duration": "12 min", "tags": ["AI", "Foundations"] },
+      { "id": "1-2", "number": "1.2", "title": "Types of Machine Learning", "duration": "14 min", "tags": ["Supervised", "Unsupervised"] },
+      { "id": "1-3", "number": "1.3", "title": "Supervised Learning & Its Types", "duration": "18 min", "tags": ["Classification", "Regression"] },
+      { "id": "1-4", "number": "1.4", "title": "Unsupervised Learning & Its Types", "duration": "16 min", "tags": ["Clustering", "Patterns"] },
+      { "id": "1-5", "number": "1.5", "title": "Introduction to Deep Learning Overview", "duration": "20 min", "tags": ["Neural Networks", "Deep Learning"] }
+    ]
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "Python Basics for Machine Learning",
+    "description": "Learn the Python essentials used throughout the ML workflow.",
+    "level": "Foundation",
+    "lessons": [
+      { "id": "2-1", "number": "2.1", "title": "Google Collaboratory Basics", "duration": "11 min", "tags": ["Colab", "Notebooks"] },
+      { "id": "2-2", "number": "2.2", "title": "Python Syntax & Data Types", "duration": "22 min", "tags": ["Python", "Data Types"] },
+      { "id": "2-3", "number": "2.3", "title": "Operators, Conditional Statements (If-Else)", "duration": "19 min", "tags": ["Python", "Logic"] },
+      { "id": "2-4", "number": "2.4", "title": "Python Loops & Functions", "duration": "24 min", "tags": ["Loops", "Functions"] }
+    ]
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "Python Libraries for Machine Learning",
+    "description": "Work confidently with the core Python data science toolkit.",
+    "level": "Core skills",
+    "lessons": [
+      { "id": "3-1", "number": "3.1", "title": "Hands-on NumPy Library Guide", "duration": "28 min", "tags": ["NumPy", "Arrays"] },
+      { "id": "3-2", "number": "3.2", "title": "Data Manipulation with Pandas Library", "duration": "32 min", "tags": ["Pandas", "DataFrames"] },
+      { "id": "3-3", "number": "3.3", "title": "Data Visualization with Matplotlib & Seaborn", "duration": "26 min", "tags": ["Matplotlib", "Seaborn"] },
+      { "id": "3-4", "number": "3.4", "title": "Machine Learning with Scikit-learn (scikit-learn)", "duration": "30 min", "tags": ["Scikit-learn", "Pipeline"] }
+    ]
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "Data Collection & Data Preprocessing",
+    "description": "Turn raw data into clean, model-ready features.",
+    "level": "Core skills",
+    "lessons": [
+      { "id": "4-1", "number": "4.1", "title": "Data Collection & Importing Datasets via Kaggle API", "duration": "23 min", "tags": ["Kaggle API", "Datasets"] },
+      { "id": "4-2", "number": "4.2", "title": "Handling Missing Values & Data Cleaning", "duration": "25 min", "tags": ["Cleaning", "Missing Data"] },
+      { "id": "4-3", "number": "4.3", "title": "Data Standardization & Feature Scaling", "duration": "21 min", "tags": ["Scaling", "Features"] }
+    ]
+  },
+  {
+    "id": "module-5",
+    "number": 5,
+    "title": "Mathematical Foundations for ML",
+    "description": "Understand the math that makes modern models work.",
+    "level": "Theory",
+    "lessons": [
+      { "id": "5-1", "number": "5.1", "title": "Linear Algebra Fundamentals", "duration": "34 min", "tags": ["Vectors", "Matrices"] },
+      { "id": "5-2", "number": "5.2", "title": "Calculus Core Concepts", "duration": "31 min", "tags": ["Derivatives", "Gradients"] },
+      { "id": "5-3", "number": "5.3", "title": "Probability & Descriptive Statistics", "duration": "35 min", "tags": ["Probability", "Statistics"] }
+    ]
+  },
+  {
+    "id": "module-6",
+    "number": 6,
+    "title": "Machine Learning Models Overview",
+    "description": "Choose, assess, and improve models with intention.",
+    "level": "Modeling",
+    "lessons": [
+      { "id": "6-1", "number": "6.1", "title": "Understanding ML Models & Real-world Applications", "duration": "20 min", "tags": ["Models", "Applications"] },
+      { "id": "6-2", "number": "6.2", "title": "Model Selection Framework for Specific Problem Statements", "duration": "27 min", "tags": ["Selection", "Problem Framing"] },
+      { "id": "6-3", "number": "6.3", "title": "Model Optimization & Evaluation Metrics", "duration": "29 min", "tags": ["Metrics", "Optimization"] }
+    ]
+  },
+  {
+    "id": "module-7",
+    "number": 7,
+    "title": "Classification Models",
+    "description": "Predict categories using essential supervised learning algorithms.",
+    "level": "Modeling",
+    "lessons": [
+      { "id": "7-1", "number": "7.1", "title": "Logistic Regression Theory & Math", "duration": "30 min", "tags": ["Logistic Regression", "Math"] },
+      { "id": "7-2", "number": "7.2", "title": "Building Logistic Regression from Scratch in Python", "duration": "38 min", "tags": ["Python", "From Scratch"] },
+      { "id": "7-3", "number": "7.3", "title": "Support Vector Machines (SVM) Classifier", "duration": "33 min", "tags": ["SVM", "Classification"] },
+      { "id": "7-4", "number": "7.4", "title": "Decision Tree Classification", "duration": "27 min", "tags": ["Decision Tree", "Classification"] },
+      { "id": "7-5", "number": "7.5", "title": "Random Forest Classification", "duration": "29 min", "tags": ["Random Forest", "Ensemble"] },
+      { "id": "7-6", "number": "7.6", "title": "Naive Bayes Classification", "duration": "22 min", "tags": ["Naive Bayes", "Probability"] },
+      { "id": "7-7", "number": "7.7", "title": "K-Nearest Neighbors (KNN)", "duration": "24 min", "tags": ["KNN", "Distance"] }
+    ]
+  },
+  {
+    "id": "module-8",
+    "number": 8,
+    "title": "Regression Models",
+    "description": "Predict continuous values with robust regression techniques.",
+    "level": "Modeling",
+    "lessons": [
+      { "id": "8-1", "number": "8.1", "title": "Linear Regression Theory & Building from Scratch", "duration": "37 min", "tags": ["Linear Regression", "From Scratch"] },
+      { "id": "8-2", "number": "8.2", "title": "Lasso Regression", "duration": "23 min", "tags": ["Lasso", "Regularization"] },
+      { "id": "8-3", "number": "8.3", "title": "Logistic Regression for Regression Problems", "duration": "18 min", "tags": ["Regression", "Comparison"] },
+      { "id": "8-4", "number": "8.4", "title": "Support Vector Regression (SVR)", "duration": "28 min", "tags": ["SVR", "Regression"] },
+      { "id": "8-5", "number": "8.5", "title": "Decision Tree & Random Forest Regression", "duration": "32 min", "tags": ["Trees", "Ensemble"] }
+    ]
+  },
+  {
+    "id": "module-9",
+    "number": 9,
+    "title": "Clustering Models",
+    "description": "Discover structure in unlabeled data with clustering.",
+    "level": "Unsupervised",
+    "lessons": [
+      { "id": "9-1", "number": "9.1", "title": "K-Means Clustering Theory & Hands-on Implementation", "duration": "36 min", "tags": ["K-Means", "Clustering"] },
+      { "id": "9-2", "number": "9.2", "title": "Hierarchical Clustering", "duration": "26 min", "tags": ["Hierarchy", "Dendrogram"] }
+    ]
+  },
+  {
+    "id": "module-10",
+    "number": 10,
+    "title": "Association Rule Learning",
+    "description": "Reveal useful relationships and patterns across transactions.",
+    "level": "Unsupervised",
+    "lessons": [
+      { "id": "10-1", "number": "10.1", "title": "Apriori Algorithm", "duration": "28 min", "tags": ["Apriori", "Association Rules"] },
+      { "id": "10-2", "number": "10.2", "title": "ECLAT Algorithm", "duration": "24 min", "tags": ["ECLAT", "Frequent Items"] }
+    ]
+  },
+  {
+    "id": "module-11",
+    "number": 11,
+    "title": "Real-World Hands-on Projects",
+    "description": "Apply your complete toolkit to six portfolio-ready builds.",
+    "level": "Projects",
+    "lessons": [
+      { "id": "11-1", "number": "P1", "title": "Face Recognition System", "duration": "72 min", "tags": ["Computer Vision", "Project"] },
+      { "id": "11-2", "number": "P2", "title": "Rock vs. Mine Prediction", "duration": "48 min", "tags": ["Classification", "Project"] },
+      { "id": "11-3", "number": "P3", "title": "Diabetes Prediction System", "duration": "54 min", "tags": ["Healthcare", "Project"] },
+      { "id": "11-4", "number": "P4", "title": "House Price Prediction", "duration": "61 min", "tags": ["Regression", "Project"] },
+      { "id": "11-5", "number": "P5", "title": "Fake News Prediction", "duration": "68 min", "tags": ["NLP", "Project"] },
+      { "id": "11-6", "number": "P6", "title": "Loan Status Prediction System", "duration": "58 min", "tags": ["Classification", "Project"] }
+    ]
+  }
+]
